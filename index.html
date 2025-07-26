@@ -3,28 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Angel Store</title>
+    <title>Angel Store Admin</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <h1>Angel Store</h1>
+        <h1>Angel Store Admin</h1>
     </header>
     
     <main>
-        <section id="categories">
-            <h2>Categories</h2>
-            <div id="categories-container" class="grid-container"></div>
+        <section id="category-section">
+            <h2>Manage Categories</h2>
+            <div class="form-group">
+                <label for="category-name">Category Name:</label>
+                <input type="text" id="category-name" required>
+            </div>
+            <div class="form-group">
+                <label for="category-image">Category Image URL:</label>
+                <input type="text" id="category-image">
+            </div>
+            <button id="add-category">Add Category</button>
+            
+            <div id="categories-list">
+                <h3>Existing Categories</h3>
+                <ul id="categories-container"></ul>
+            </div>
         </section>
         
-        <section id="products">
-            <h2 id="category-title">All Products</h2>
-            <div id="products-container" class="grid-container"></div>
+        <section id="product-section">
+            <h2>Manage Products</h2>
+            <div class="form-group">
+                <label for="product-category">Category:</label>
+                <select id="product-category"></select>
+            </div>
+            <div class="form-group">
+                <label for="product-name">Product Name:</label>
+                <input type="text" id="product-name" required>
+            </div>
+            <div class="form-group">
+                <label for="product-desc">Description:</label>
+                <textarea id="product-desc"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="product-price">Price:</label>
+                <input type="number" id="product-price" step="0.01" required>
+            </div>
+            <div class="form-group">
+                <label for="product-image">Image URL:</label>
+                <input type="text" id="product-image">
+            </div>
+            <div class="form-group">
+                <label for="affiliate-link">Affiliate Link:</label>
+                <input type="url" id="affiliate-link" required>
+            </div>
+            <button id="add-product">Add Product</button>
+            
+            <div id="products-list">
+                <h3>Existing Products</h3>
+                <div id="products-container"></div>
+            </div>
         </section>
     </main>
     
     <footer>
-        <p>Angel Store &copy; 2023</p>
+        <p>Angel Store Admin Panel</p>
     </footer>
     
     <script src="script.js"></script>
